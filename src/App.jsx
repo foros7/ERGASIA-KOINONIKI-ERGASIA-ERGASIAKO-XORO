@@ -6,11 +6,11 @@ import EducationalMaterial from './components/EducationalMaterial'
 
 export default function App() {
   return (
-    <Router>
+    <BrowserRouter basename="/ERGASIA-KOINONIKI-ERGASIA-ERGASIAKO-XORO">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/educational-material" element={<EducationalMaterial />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   )
 }
