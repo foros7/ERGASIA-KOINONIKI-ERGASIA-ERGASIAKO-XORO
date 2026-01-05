@@ -320,3 +320,233 @@ footer {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
+
+/* FAQ Styles */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.faq-question:hover {
+    color: var(--accent);
+}
+
+.faq-question:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--accent);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    min-width: 24px;
+    text-align: center;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(0deg);
+}
+
+.faq-answer {
+    padding: 0 20px 20px 20px;
+    color: var(--text);
+    line-height: 1.7;
+    animation: fadeIn 0.3s ease;
+}
+
+.faq-answer p {
+    margin: 0 0 12px 0;
+    color: var(--text-muted);
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer ul {
+    margin: 0;
+    padding-left: 24px;
+    color: var(--text-muted);
+}
+
+.faq-answer li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+.faq-answer li:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fun Photo Animations */
+.team-photo-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    padding: 20px;
+}
+
+.team-photo {
+    max-width: 100%;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    border: 4px solid var(--accent);
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.team-photo:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: var(--shadow-accent);
+}
+
+.bounce-in {
+    animation: bounceIn 0.8s ease-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(-50px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fun-photos-section {
+    margin-top: 40px;
+}
+
+.fun-photos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px 0;
+    align-items: center;
+}
+
+.fun-photo-wrapper {
+    width: 100%;
+    max-width: 500px;
+    perspective: 1000px;
+}
+
+.fun-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    border: 3px solid var(--accent-2);
+    object-fit: cover;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+}
+
+.fun-photo:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: var(--shadow-accent);
+    border-color: var(--accent);
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+.float-animation-delayed {
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-15px) rotate(-1deg);
+    }
+}
+
+.fun-photo-wrapper:hover .fun-photo {
+    animation-play-state: paused;
+}
+
+/* Desktop layout for fun photos */
+@media (min-width: 768px) {
+    .fun-photos-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+    .fun-photo-wrapper {
+        max-width: 400px;
+    }
+    
+    .team-photo {
+        max-width: 700px;
+    }
+}

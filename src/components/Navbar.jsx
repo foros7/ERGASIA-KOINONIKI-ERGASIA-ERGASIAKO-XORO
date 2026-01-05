@@ -9,8 +9,10 @@ export default function Navbar() {
         <nav className="nav-links">
           <Link to="/">Αρχική</Link>
           <Link to="/educational-material">Επιμορφωτικό Υλικό</Link>
-          <a href="#services">Υπηρεσίες</a>
-          <a href="#contact">Επικοινωνία</a>
+          <Link to="/story">Ιστορία Ζωής</Link>
+          <Link to="/faq">Συχνές Ερωτήσεις</Link>
+          <Link to="/boardgame">Επιτραπέζιο</Link>
+          <Link to="/about">Ποιοί είμαστε</Link>
         </nav>
       </div>
     </header>

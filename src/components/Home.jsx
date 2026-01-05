@@ -46,7 +46,7 @@ export default function Home() {
           <div className="hero">
             <h1>Ενημερώνουμε για την Αντιμετώπιση της Επαγγελματικής Εξουθένωσης</h1>
             <div className="hero-actions">
-              <a className="btn primary" href="#services">Ποιοί είμαστε</a>
+              <a className="btn primary" href="about">Ποιοί είμαστε</a>
             </div>
           </div>
 
