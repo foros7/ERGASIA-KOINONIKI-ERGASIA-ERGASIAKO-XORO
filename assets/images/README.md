@@ -8,3 +8,4 @@ Place your images here:
 
 The images will be automatically served from `/ERGASIA-KOINONIKI-ERGASIA-ERGASIAKO-XORO/assets/images/` when the site is built.
 
+
